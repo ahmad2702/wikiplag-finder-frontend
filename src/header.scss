@@ -1,0 +1,112 @@
+/**Header / Navigation bar*/
+.header{
+  width: 100%;
+  height: 23vh;
+  background-image: linear-gradient(104deg, #91e203 0%, #83ca04 58%, #76b900 100%);
+  position: relative;
+}
+
+//Deactivate link styling
+a:hover, a:visited, a:link, a:active .nav-index-link{
+  text-decoration: none;
+}
+
+.header-mouse-img{
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+}
+
+@media only screen and (min-width: 920px) {
+  /**
+  Some styles for small devices
+   */
+  .header-mouse-img{
+    height: 80%;
+    width: 16%;
+  }
+
+  .header-htw-img{
+    position: absolute;
+    width: 8vw;
+    right: 2vw;
+    bottom: 2vw;
+  }
+
+  .nav-index-link{
+    width: 25vw;
+  }
+
+  .header-text{
+    font-size: 4vw;
+  }
+
+  .header-subtitle{
+    font-size: 1.8vw;
+  }
+
+}
+
+@media only screen and (max-width: 919px) {
+  .header-mouse-img{
+    height: 100%;
+    width: 35%;
+  }
+
+  .header-htw-img{
+    position: absolute;
+    width: 12vw;
+    right: 2vw;
+    bottom: 2vw;
+  }
+
+  .nav-index-link{
+    width: 40vw;
+  }
+
+  .header-text{
+    font-size: 8vw;
+  }
+
+  .header-subtitle{
+    font-size: 3vw;
+  }
+}
+
+.nav-index-link{
+  position: absolute;
+  z-index: 99;
+  text-align: center;
+  bottom: 10%;
+
+}
+
+.header-text{
+  /* Style for "WIKIPlag" */
+  text-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  display: inline;
+}
+
+.wiki-header-text{
+  /* Text style for "WIKI" */
+  font-family: "Avenir Next";
+  font-weight: 700;
+  display: inline-block;
+}
+
+.plag-header-text{
+  /* Text style for "Plag" */
+  font-family: "Avenir Next Medium";
+  font-weight: 500;
+  display: inline-block;
+}
+
+.header-subtitle{
+  /* Style for "EIN UNIVER" */
+  color: #ffffff;
+  font-family: "Avenir Next Medium";
+  font-weight: 500;
+  line-height: 25px;
+  text-transform: uppercase;
+}

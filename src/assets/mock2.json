@@ -1,0 +1,17 @@
+{
+  "plags": [
+    {
+      "id": 0,
+      "wiki_excerpts": [
+        {
+          "title": "Alan Smithee",
+          "id": 1,
+          "start": 0,
+          "end": 307,
+          "excerpt": "[...] te.Auch bei nicht-<span class='wiki_plag'>US-amerikanischen Produktionen wird der Name verwendet, wie etwa beim Pilotfilm der Fernsehserie Schulmädchen. 2007 sendete die ARD am 8. und 9. August den zweiteiligen TV-Film Paparazzo. Auch in diesem Werk erscheint anstatt des eigentlichen Regisseurs Stephan Wagner Alan Smithee im Abspann</span>.Regisseure, die d [...]"
+        }
+      ]
+    }
+  ],
+  "tagged_input_text": "<span id='0' class='input_plag'>Auch bei nicht-US-amerikanischen Produktionen wird der Name verwendet, wie etwa beim Pilotfilm der Fernsehserie Schulmädchen. 2007 sendete die ARD am 8. und 9. August den zweiteiligen TV-Film Paparazzo. Auch in diesem Werk erscheint anstatt des eigentlichen Regisseurs Stephan Wagner Alan Smithee im Abspann</span>."
+}

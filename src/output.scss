@@ -1,0 +1,40 @@
+.output-textbox-content {
+  word-wrap: break-word;
+  height: 50vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 10px;
+}
+
+.plag-placeholder {
+  text-align: center;
+  margin: 60% auto;
+}
+
+.output-plagbox:hover {
+  background-color: rgba(145, 226, 3, 0.15);
+}
+
+.output-plagbox {
+  cursor: pointer;
+}
+
+.buttons-output-component {
+  position: absolute;
+  right: 0%;
+  padding-top: 2%;
+  right: 2%;
+}
+
+.output-textbox {
+  padding: 0;
+  margin-top: 2%;
+  height: 100%;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.input_plag {
+  background: rgba(255, 192, 0, 0.36);
+}

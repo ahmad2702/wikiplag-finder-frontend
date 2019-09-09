@@ -1,0 +1,73 @@
+<div class="animated bounceInLeft">
+  <div class="tbl_div">
+    <div class="row row-correction">
+      <div class="col-sm-0 col-md-1 col-lg-1">
+      </div>
+      <div class=" col-sm-12 col-md-6 col-lg-6">
+        <div class="output-textbox">
+          <div class="textbox_h1_div">
+            <h1 class="textbox_h1">Eingabetext</h1>
+          </div>
+          <div class="input_textbox" [innerHTML]="tagged_input_text | safeHtml" *ngIf="!shortened_text"></div>
+          <div id="splitted-text" class="output_shortened_text output-textbox-content" *ngIf="shortened_text">
+            <br>
+            <div *ngFor="let plag of textPieces; let i=index" id="{{i}}">
+              <div [ngSwitch]="plag.active">
+                <div class="row">
+                  <div class="col-sm-1 col-md-1 col-lg-1">
+                    <button class="button button-secondary" *ngIf="plag.type === 'text' && plag.active" (click)="changeViewState(i)">
+                      <i class="fas fa-caret-down"></i>
+                    </button>
+                    <button class="button button-secondary" *ngIf="plag.type === 'text' && !plag.active" (click)="changeViewState(i)">
+                      <i class="fas fa-caret-right"></i>
+                    </button>
+                  </div>
+                  <div class="col-sm-11 col-md-11 col-lg-11">
+                    <div [innerHTML]="plag.text | safeHtml" *ngIf="plag.active"></div>
+                    <div class="badge badge-info pointer-cursor" *ngIf="plag.type === 'text' && !plag.active" (click)="changeViewState(i)"> ...
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class=" col-sm-12 col-md-4 col-lg-4">
+        <div class="output-textbox">
+          <div class="textbox_h1_div">
+            <h1 class="textbox_h1">Plagiate</h1>
+          </div>
+          <div class="output-textbox-content">
+            <div class="plag-placeholder" *ngIf="!articleListOfSelectedPlag">
+              Keine Plagiate ausgewählt!
+            </div>
+            <div class="wiki_plag output-plagbox" (click)="showPlagOnWikipedia(plag.id)" style="text-align: center;" *ngFor="let plag of articleListOfSelectedPlag; let i=index"
+              id="{{i}}">
+              <h2>{{plag.title}}</h2>
+              <div class="alert alert-dismissible alert-info excerpt_textbox" [innerHTML]="plag.excerpt">
+              </div>
+              <hr>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-sm-0 col-md-1 col-lg-1">
+      </div>
+
+    </div>
+    <div class="row row-correction">
+      <div class="col-sm-0 col-md-1 col-lg-1">
+      </div>
+      <div class="col-sm-12 col-md-10 col-lg-10">
+        <div class="buttons-output-component">
+          <button class="button button-primary" style="margin-right: 20px;" (click)="newInput()">Neuer Text</button>
+          <button class="button button-secondary" (click)="pdfExport()">PDF generieren</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
